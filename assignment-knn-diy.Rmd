@@ -27,7 +27,10 @@ Choose a suitable dataset from [this](https://github.com/HAN-M3DM-Data-Mining/as
 text and code here
 
 ## Data Understanding
-text and code here
+url <- "https://raw.githubusercontent.com/HAN-M3DM-Data-Mining/assignments/master/datasets/KNN-hcvdat0.csv"
+rawDF <- read_csv(url)
+str(rawDF)
+
 
 ## Data Preparation
 text and code here
