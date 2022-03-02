@@ -42,10 +42,14 @@ Use that formula to see how many office has been occupancy.
 (1:occupancy, 0:not occupied)
 cntDiag <- table(cleanDF$Occupancy)
 propDiag <- round(prop.table(cntDiag) * 100 , digits = 1)
-cntDiag
+
+
 result: 
+cntDiag
 0    1 
 6414 1729 
+propDiag 
+78.8    21.2
 
 ## Modeling
 text and code here
