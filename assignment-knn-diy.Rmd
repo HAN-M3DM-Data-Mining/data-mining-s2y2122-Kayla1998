@@ -34,7 +34,9 @@ str(rawDF)
 
 
 ## Data Preparation
-text and code here
+The first variable "date" is not contained with other infomation. Therefore, we can clean that data.
+cleanDF <- rawDF[-1]
+head(cleanDF)
 
 ## Modeling
 text and code here
