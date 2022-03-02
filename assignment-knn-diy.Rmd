@@ -61,6 +61,10 @@ Next step is to change the "1" and "0" into "occupancy" and "not occupied"
 ```{r}
 cleanDF$diagnosis <- factor(cleanDF$Occupancy, levels = c("1", "0"), labels = c("occupancy", "not occupied")) %>% relevel("not occupied")
 ```
+Using that formula, we will get a summarize of this table.
+```{r}
+summary(cleanDF[c("Temperature", "Humidity", "Light", "CO2")])
+```
 
 ## Modeling
 text and code here
