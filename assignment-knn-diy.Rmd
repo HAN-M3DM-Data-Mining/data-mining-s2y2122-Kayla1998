@@ -65,7 +65,34 @@ Using that formula, we will get a summarize of this table.
 ```{r}
 summary(cleanDF[c("Temperature", "Humidity", "Light", "CO2")])
 ```
+After that, we have to change the length in to the same.
+```{r}
+normalize <- function(x) { # Function takes in a vector
+  return ((x - min(x)) / (max(x) - min(x))) # distance of item value - minimum vector value divided by the range of all vector values
+}
 
+testSet1 <- c(1:5)
+testSet2 <- c(1:5) * 10
+
+cat("testSet1:", testSet1, "\n")
+```
+
+```{r}
+cat("Normalized testSet1:", normalize(testSet1), "\n")
+cat("Normalized testSet2:", normalize(testSet2))
+```
+
+```{r}
+summary(cleanDF)
+nCols <- dim(cleanDF)[2]
+
+cleanDF_n<- sapply(2:nCols-1,
+                    function(x) {
+  normalize(cleanDF[,x])
+}) %>% as.data.frame()
+
+summary(cleanDF_n[c("Temperature", "Humidity", "Light", "CO2", "HumidityRatio")])
+```
 ## Modeling
 text and code here
 
