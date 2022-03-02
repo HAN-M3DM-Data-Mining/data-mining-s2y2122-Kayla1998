@@ -38,6 +38,15 @@ The first variable "date" is not contained with other infomation. Therefore, we 
 cleanDF <- rawDF[-1]
 head(cleanDF)
 
+Use that formula to see how many office has been occupancy.
+(1:occupancy, 0:not occupied)
+cntDiag <- table(cleanDF$Occupancy)
+propDiag <- round(prop.table(cntDiag) * 100 , digits = 1)
+cntDiag
+result: 
+0    1 
+6414 1729 
+
 ## Modeling
 text and code here
 
