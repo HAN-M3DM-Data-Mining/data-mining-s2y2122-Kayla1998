@@ -99,9 +99,13 @@ trainDF_feat <- cleanDF_n[1:4000, 1]
 testDF_feat <- cleanDF_n[4000:8143, 1]
 ```
 ## Modeling
-text and code here
+```{r}
+cleanDF_test_pred <- knn(train = as.matrix(trainDF_feat), test = as.matrix(testDF_feat), cl = as.matrix(trainDF_labels), k = 57)
+head(cleanDF_test_pred)
+```
+[1] not occupied not occupied not occupied not occupied not occupied
+[6] not occupied
+Levels: not occupied occupancy
 
 ## Evaluation and Deployment
-text and code here
-
-reviewer adds suggestions for improving the model
+confusionMatrix(cleanDF_test_pred, testDF_labels[[1]], positive = NULL, dnn = c("Prediction", "True"))
