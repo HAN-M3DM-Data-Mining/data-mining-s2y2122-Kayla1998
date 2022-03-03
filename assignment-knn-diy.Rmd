@@ -95,8 +95,8 @@ summary(cleanDF_n[c("Temperature", "Humidity", "Light", "CO2", "HumidityRatio")]
 ```
 Traing the data
 ```{r}
-trainDF_feat <- cleanDF_n[1:4000, 1]
-testDF_feat <- cleanDF_n[4000:8143, 1]
+trainDF_feat <- cleanDF_n[1:4000, 7]
+testDF_feat <- cleanDF_n[4000:8143, 7]
 ```
 ## Modeling
 ```{r}
