@@ -108,4 +108,6 @@ head(cleanDF_test_pred)
 Levels: not occupied occupancy
 
 ## Evaluation and Deployment
+```{r}
 confusionMatrix(cleanDF_test_pred, testDF_labels[[1]], positive = NULL, dnn = c("Prediction", "True"))
+```
