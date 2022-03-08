@@ -2,7 +2,7 @@
 title: "Assigment - kNN DIY"
 author:
   - name author here - Author Kayla Zhang
-  - name reviewer here - Reviewer Aziz
+  - name reviewer here - Reviewer 
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
    html_notebook:
