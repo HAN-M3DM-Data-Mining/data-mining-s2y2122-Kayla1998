@@ -119,4 +119,4 @@ confusionMatrix(predVec,testDataFrame$label,positive = "Fake",dnn = c("Predictio
 ```
 
 reviewer adds suggestions for improving the model
-the feedback has provide under the erro.
+the feedback has provide under the error.
